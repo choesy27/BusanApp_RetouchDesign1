@@ -1,4 +1,4 @@
-package com.example.busanapp.HelperClasses.cafe.city;
+package com.example.busanapp.HelperClasses.cafe.cities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import com.example.busanapp.R;
 
 import java.util.ArrayList;
 
-public class SaHaGu extends Fragment {
+public class BukGu extends Fragment {
     private RecyclerView cafeRecycler;
 
     @Nullable
@@ -36,12 +36,12 @@ public class SaHaGu extends Fragment {
 
         ArrayList<CafeHelperClass> cafeLocations = new ArrayList<>();
 
-        cafeLocations.add(new CafeHelperClass("https://www.visitbusan.net/uploadImgs/files/cntnts/20200110154437714_oen",
-                "#사하구지역\n\n" +
-                        "소울레터커피컴퍼니\n" +
-                        " 신평동에 있는 ‘소울레터커피컴퍼니’는 식물이 있는 공간이라는 콘셉트를 가진 깔끔한 카페이다." +
-                        " 흰색 벽돌 내부 벽면과 카페 안을 채우고 있는 초록식물들이 편안하고 아늑한 공간을 만들어준다." +
-                        " 소울 시그니처 커피가 인기 메뉴이고 호주식 디저트 파블로바도 인기다."));
+        cafeLocations.add(new CafeHelperClass("https://www.visitbusan.net/uploadImgs/files/cntnts/20200110153821715_oen",
+                "#북구지역\n\n" +
+                        "루왁\n" +
+                        " 도심 속에서 이색적인 분위기를 찾고 싶다면 카페 ‘루왁’을 추천한다." +
+                        " 금곡동 부산인도네시아센터 1층에 자리하고 있는 이곳은 인도네시아 전통 기념품들과 특산품 코너도 따로 마련되어 있다." +
+                        " 한국 속 작은 인도네시아를 느끼며 커피 한 잔의 여유를 즐기고 싶은 이들에게 알맞은 장소."));
 
         RecyclerView.Adapter adapter = new CafeAdapter(cafeLocations);
         cafeRecycler.setAdapter(adapter);

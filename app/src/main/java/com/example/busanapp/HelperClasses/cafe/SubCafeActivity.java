@@ -1,27 +1,31 @@
 package com.example.busanapp.HelperClasses.cafe;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 
-import com.example.busanapp.HelperClasses.cafe.city.BukGu;
-import com.example.busanapp.HelperClasses.cafe.city.BusanJinGu;
-import com.example.busanapp.HelperClasses.cafe.city.DongGu;
-import com.example.busanapp.HelperClasses.cafe.city.DongRaeGu;
-import com.example.busanapp.HelperClasses.cafe.city.GangSeoGu;
-import com.example.busanapp.HelperClasses.cafe.city.GeumJeongGu;
-import com.example.busanapp.HelperClasses.cafe.city.GiJangGun;
-import com.example.busanapp.HelperClasses.cafe.city.HaeWoonDae;
-import com.example.busanapp.HelperClasses.cafe.city.JungGu;
-import com.example.busanapp.HelperClasses.cafe.city.NamGu;
-import com.example.busanapp.HelperClasses.cafe.city.SaHaGu;
-import com.example.busanapp.HelperClasses.cafe.city.SaSangGu;
-import com.example.busanapp.HelperClasses.cafe.city.SeoGu;
-import com.example.busanapp.HelperClasses.cafe.city.SuYoungGu;
-import com.example.busanapp.HelperClasses.cafe.city.YeonJeGu;
-import com.example.busanapp.HelperClasses.cafe.city.YoungDoGu;
+import com.example.busanapp.HelperClasses.cafe.cities.BukGu;
+import com.example.busanapp.HelperClasses.cafe.cities.BusanJinGu;
+import com.example.busanapp.HelperClasses.cafe.cities.DongGu;
+import com.example.busanapp.HelperClasses.cafe.cities.DongRaeGu;
+import com.example.busanapp.HelperClasses.cafe.cities.GangSeoGu;
+import com.example.busanapp.HelperClasses.cafe.cities.GeumJeongGu;
+import com.example.busanapp.HelperClasses.cafe.cities.GiJangGun;
+import com.example.busanapp.HelperClasses.cafe.cities.HaeWoonDae;
+import com.example.busanapp.HelperClasses.cafe.cities.JungGu;
+import com.example.busanapp.HelperClasses.cafe.cities.NamGu;
+import com.example.busanapp.HelperClasses.cafe.cities.SaHaGu;
+import com.example.busanapp.HelperClasses.cafe.cities.SaSangGu;
+import com.example.busanapp.HelperClasses.cafe.cities.SeoGu;
+import com.example.busanapp.HelperClasses.cafe.cities.SuYoungGu;
+import com.example.busanapp.HelperClasses.cafe.cities.YeonJeGu;
+import com.example.busanapp.HelperClasses.cafe.cities.YoungDoGu;
 import com.example.busanapp.R;
+
+import java.util.Objects;
 
 public class SubCafeActivity extends AppCompatActivity {
     JungGu jungGu;
@@ -45,6 +49,14 @@ public class SubCafeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_cafe);
+
+        // Toolbar
+        Toolbar toolbar = findViewById(R.id.cafe_toolbar);
+
+        setSupportActionBar(toolbar);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_icon);
 
         jungGu = new JungGu();
         seoGu = new SeoGu();
@@ -110,5 +122,13 @@ public class SubCafeActivity extends AppCompatActivity {
 
         Button btn_sy = findViewById(R.id.SuYoungGu);
         btn_sy.setOnClickListener(v -> getSupportFragmentManager().beginTransaction().replace(R.id.container, suYoungGu).commit());
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

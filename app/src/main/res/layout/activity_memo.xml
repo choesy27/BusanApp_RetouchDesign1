@@ -11,7 +11,7 @@
         android:id="@+id/memo_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#92A8D1"
+        android:background="@color/MainColor"
         app:titleTextColor="@android:color/white" />
 
     <EditText

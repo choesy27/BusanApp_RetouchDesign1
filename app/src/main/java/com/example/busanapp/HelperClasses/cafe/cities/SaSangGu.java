@@ -1,4 +1,4 @@
-package com.example.busanapp.HelperClasses.cafe.city;
+package com.example.busanapp.HelperClasses.cafe.cities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import com.example.busanapp.R;
 
 import java.util.ArrayList;
 
-public class YeonJeGu extends Fragment {
+public class SaSangGu extends Fragment {
     private RecyclerView cafeRecycler;
 
     @Nullable
@@ -36,12 +36,13 @@ public class YeonJeGu extends Fragment {
 
         ArrayList<CafeHelperClass> cafeLocations = new ArrayList<>();
 
-        cafeLocations.add(new CafeHelperClass("https://www.visitbusan.net/uploadImgs/files/cntnts/20200110154444697_oen",
-                "#연제구지역\n\n" +
-                        "고래커피\n" +
-                        " 다양한 소품들과 빈티지한 감성을 느낄 수 있는 연산동 ‘고래커피.’" +
-                        " SNS에서도 높은 인기를 자랑하는 이곳은 마치 공사장에 온 것 같은 느낌의 인테리어가 시그니처다." +
-                        " 직접 로스팅한 커피를 판매하고 있으며, 원당 밀크커피와 흑당 구름 커피가 유명하다."));
+        cafeLocations.add(new CafeHelperClass("https://www.visitbusan.net/uploadImgs/files/cntnts/20200110153822922_oen",
+                "#사상구지역\n\n" +
+                        "Vsant\n" +
+                        " 낙동강 강변대로의 전망을 즐길 수 있는 ‘Vsant.’" +
+                        " 해질 무렵 방문한다면 운치 있는 노을을 마주하며 커피를 즐길 수 있는 곳이다." +
+                        " 중후하면서도 럭셔리한 내부 인테리어는 커피의 진한 맛을 더해준다." +
+                        " 3층 루프탑에 오르면 곳곳에 선셋 포인트와 포토존이 준비되어 있다."));
 
         RecyclerView.Adapter adapter = new CafeAdapter(cafeLocations);
         cafeRecycler.setAdapter(adapter);

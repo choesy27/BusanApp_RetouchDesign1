@@ -24,7 +24,7 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.AdapterAllCate
     @NonNull
     @Override
     public AdapterAllCategoriesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cafe_item, parent, false);
         return new AdapterAllCategoriesViewHolder(view);
     }
 

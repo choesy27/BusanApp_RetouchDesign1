@@ -1,4 +1,4 @@
-package com.example.busanapp.HelperClasses.cafe.city;
+package com.example.busanapp.HelperClasses.cafe.cities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import com.example.busanapp.R;
 
 import java.util.ArrayList;
 
-public class BukGu extends Fragment {
+public class YeonJeGu extends Fragment {
     private RecyclerView cafeRecycler;
 
     @Nullable
@@ -36,12 +36,12 @@ public class BukGu extends Fragment {
 
         ArrayList<CafeHelperClass> cafeLocations = new ArrayList<>();
 
-        cafeLocations.add(new CafeHelperClass("https://www.visitbusan.net/uploadImgs/files/cntnts/20200110153821715_oen",
-                "#북구지역\n\n" +
-                        "루왁\n" +
-                        " 도심 속에서 이색적인 분위기를 찾고 싶다면 카페 ‘루왁’을 추천한다." +
-                        " 금곡동 부산인도네시아센터 1층에 자리하고 있는 이곳은 인도네시아 전통 기념품들과 특산품 코너도 따로 마련되어 있다." +
-                        " 한국 속 작은 인도네시아를 느끼며 커피 한 잔의 여유를 즐기고 싶은 이들에게 알맞은 장소."));
+        cafeLocations.add(new CafeHelperClass("https://www.visitbusan.net/uploadImgs/files/cntnts/20200110154444697_oen",
+                "#연제구지역\n\n" +
+                        "고래커피\n" +
+                        " 다양한 소품들과 빈티지한 감성을 느낄 수 있는 연산동 ‘고래커피.’" +
+                        " SNS에서도 높은 인기를 자랑하는 이곳은 마치 공사장에 온 것 같은 느낌의 인테리어가 시그니처다." +
+                        " 직접 로스팅한 커피를 판매하고 있으며, 원당 밀크커피와 흑당 구름 커피가 유명하다."));
 
         RecyclerView.Adapter adapter = new CafeAdapter(cafeLocations);
         cafeRecycler.setAdapter(adapter);

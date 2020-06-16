@@ -1,4 +1,4 @@
-package com.example.busanapp.HelperClasses.cafe.city;
+package com.example.busanapp.HelperClasses.cafe.cities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import com.example.busanapp.R;
 
 import java.util.ArrayList;
 
-public class SaSangGu extends Fragment {
+public class SaHaGu extends Fragment {
     private RecyclerView cafeRecycler;
 
     @Nullable
@@ -36,13 +36,12 @@ public class SaSangGu extends Fragment {
 
         ArrayList<CafeHelperClass> cafeLocations = new ArrayList<>();
 
-        cafeLocations.add(new CafeHelperClass("https://www.visitbusan.net/uploadImgs/files/cntnts/20200110153822922_oen",
-                "#사상구지역\n\n" +
-                        "Vsant\n" +
-                        " 낙동강 강변대로의 전망을 즐길 수 있는 ‘Vsant.’" +
-                        " 해질 무렵 방문한다면 운치 있는 노을을 마주하며 커피를 즐길 수 있는 곳이다." +
-                        " 중후하면서도 럭셔리한 내부 인테리어는 커피의 진한 맛을 더해준다." +
-                        " 3층 루프탑에 오르면 곳곳에 선셋 포인트와 포토존이 준비되어 있다."));
+        cafeLocations.add(new CafeHelperClass("https://www.visitbusan.net/uploadImgs/files/cntnts/20200110154437714_oen",
+                "#사하구지역\n\n" +
+                        "소울레터커피컴퍼니\n" +
+                        " 신평동에 있는 ‘소울레터커피컴퍼니’는 식물이 있는 공간이라는 콘셉트를 가진 깔끔한 카페이다." +
+                        " 흰색 벽돌 내부 벽면과 카페 안을 채우고 있는 초록식물들이 편안하고 아늑한 공간을 만들어준다." +
+                        " 소울 시그니처 커피가 인기 메뉴이고 호주식 디저트 파블로바도 인기다."));
 
         RecyclerView.Adapter adapter = new CafeAdapter(cafeLocations);
         cafeRecycler.setAdapter(adapter);

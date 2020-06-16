@@ -1,4 +1,4 @@
-package com.example.busanapp.HelperClasses.cafe.city;
+package com.example.busanapp.HelperClasses.cafe.cities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

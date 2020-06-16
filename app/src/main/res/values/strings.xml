@@ -49,6 +49,11 @@
     <string name="logout">Logout</string>
     <string name="create_account">가입하기</string>
 
+    <string name="Logo">Logo</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Register">Register</string>
+
     <!-- text -->
     <string name="prompt_trip_name">여행명을 입력하세요</string>
     <string name="prompt_start_date">여행 일자를 선택하세요</string>
@@ -88,6 +93,24 @@
 
     <string name="progress_wait">잠시만 기다려주세요.</string>
     <string name="trip_added">Trip added</string>
+
+    <!-- Cafe Cities -->
+    <string name="JungGu">#중구</string>
+    <string name="SeoGu">#서구</string>
+    <string name="DongGu">#동구</string>
+    <string name="NamGu">#남구</string>
+    <string name="YoungDoGu">#영도구</string>
+    <string name="BusanJinGu">#부산진구</string>
+    <string name="HaeWoonDae">#해운대</string>
+    <string name="DongRaeGu">#동래구</string>
+    <string name="BukGu">#북구</string>
+    <string name="SaSangGu">#사상구</string>
+    <string name="GiJangGun">#기장군</string>
+    <string name="SaHaGu">#사하구</string>
+    <string name="GeumJeongGu">#금정구</string>
+    <string name="GangSeoGu">#강서구</string>
+    <string name="YeonJeGu">#연제구</string>
+    <string name="SuYoungGu">#수영구</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
